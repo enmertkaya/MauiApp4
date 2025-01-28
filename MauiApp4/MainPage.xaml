@@ -1,0 +1,11 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="MauiApp4.MainPage">
+
+    <StackLayout Margin="20" Padding="20">
+        <Entry Placeholder="Enter User Name" x:Name="EntUserName"/>
+        <Button Text="Go" x:Name="BtnGoToPage2" Clicked="BtnGoToPage2_Clicked"/>
+    </StackLayout>
+
+</ContentPage>
