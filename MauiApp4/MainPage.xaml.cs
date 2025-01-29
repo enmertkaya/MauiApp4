@@ -4,17 +4,18 @@ namespace MauiApp4
 {
     public partial class MainPage : ContentPage
     {
-        int count = 0;
+        List<string> FruitsList = new List<string>()
+        {
+            "Apple","Banana","Cocunut","Grape","Guava","Kiwi","Mango","Melon"
+        };
 
         public MainPage()
         {
             InitializeComponent();
+            LvFruits.ItemsSource = FruitsList;
         }
 
-        private void BtnGoToPage2_Clicked(object sender, EventArgs e)
-        {
-            Navigation.PushAsync(new Page2(EntUserName.Text));
-        }
+        
     }
 
 }
