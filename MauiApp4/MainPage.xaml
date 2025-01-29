@@ -3,19 +3,20 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp4.MainPage">
 
-    <ListView x:Name="LvFruits" HasUnevenRows="True" ItemSelected="LvFruits_ItemSelected">
-        <ListView.ItemTemplate>
+    <CollectionView x:Name="LvFruits">
+        <CollectionView.ItemsLayout>
+            <GridItemsLayout Orientation="Vertical" Span="2"/>
+        </CollectionView.ItemsLayout>
+        <CollectionView.ItemTemplate>
             <DataTemplate>
-                <ViewCell>
-                    <StackLayout Margin="20" Padding="10">
-                        <Image Source="{Binding ImageName}" HeightRequest="60" WidthRequest="60" />
-                        <Label Text="{Binding Name}" FontSize="Medium"/>
-                    </StackLayout>
-                </ViewCell>
+                <StackLayout Margin="20" Padding="10">
+                    <Image Source="{Binding ImageName}" HeightRequest="60" WidthRequest="60" />
+                    <Label Text="{Binding Name}" FontSize="Medium"/>
+                </StackLayout>
             </DataTemplate>
-        </ListView.ItemTemplate>
+        </CollectionView.ItemTemplate>
         
-    </ListView>
+    </CollectionView>
     
 
 </ContentPage>
