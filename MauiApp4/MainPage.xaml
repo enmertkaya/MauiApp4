@@ -3,7 +3,7 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="MauiApp4.MainPage">
 
-    <CollectionView x:Name="LvFruits">
+    <CollectionView x:Name="LvFruits" SelectionChanged="LvFruits_SelectionChanged" SelectionMode="Single">
         <CollectionView.ItemsLayout>
             <GridItemsLayout Orientation="Vertical" Span="2"/>
         </CollectionView.ItemsLayout>

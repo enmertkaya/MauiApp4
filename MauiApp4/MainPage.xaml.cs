@@ -29,6 +29,14 @@ namespace MauiApp4
             LvFruits.ItemsSource = FruitsList;
         }
 
+        private void LvFruits_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            var selecteditem=e.CurrentSelection.FirstOrDefault() as Fruit;
+            if (selecteditem == null) return;
+            Navigation.PushAsync(new FruitDetailPage(selecteditem));
+            ((CollectionView)sender).SelectedItem = null;
+        }
+
         //private void LvFruits_ItemSelected(object sender, SelectedItemChangedEventArgs e)
         //{
         //    var selecteditem = e.SelectedItem as Fruit;
